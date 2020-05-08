@@ -9,7 +9,7 @@ export const WishProvider = props => {
             price: '300-400'
         },
         {
-            description: 'Rocccamore sko',
+            description: 'Roccamore sko',
             price: '2000'
         }
     ]);
