@@ -7,7 +7,7 @@
 
     return(
         <div>
-            
+            <p>Antal ønsker: {wishes.length}</p>           
             <div className="wrap-table100">
             <div className="table100">
             <table>
