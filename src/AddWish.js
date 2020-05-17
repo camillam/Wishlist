@@ -4,7 +4,7 @@ import {WishContext} from './WishContext';
 const AddWish = () => {
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
-    const [wishes, setWishes] = useContext(WishContext);
+    const [, setWishes] = useContext(WishContext);
 
     const updateDescription = (e) => {
         setDescription(e.target.value);

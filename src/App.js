@@ -9,9 +9,9 @@ function App() {
   return (
     <WishProvider>                 
       <div className="limiter">
-          <Nav/>
-          <WishList/>
-          <AddWish/>
+        <Nav/>
+        <WishList/>
+        <AddWish/>
       </div>
     </WishProvider>
   );

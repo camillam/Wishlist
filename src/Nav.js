@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {WishContext} from './WishContext';
 
 const Nav = () => {
-    const [wishes, setWishes] = useContext(WishContext);
+    const [wishes] = useContext(WishContext);
 
     return (
         <div>
