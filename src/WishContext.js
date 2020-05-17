@@ -10,7 +10,7 @@ export const WishProvider = props => {
         },
         {
             description: 'Roccamore sko',
-            price: '2000'
+            price: '1999'
         }
     ]);
 
