@@ -6,18 +6,15 @@
     const [wishes] = useContext(WishContext);
 
     return(
-        <div>
-            <p>Antal ønsker: {wishes.length}</p>           
+        <div>         
             <div className="wrap-table100">
             <div className="table100">
             <table>
-                <thead>
-                    <tr className="tableHead">
-                        <th className="column1">Description</th>
-                        <th className="column2">Price</th>
-                    </tr>
-                </thead>
                 <tbody>
+                    <tr>
+                        <td className="column1"><b>Antal ønsker: {wishes.length}</b></td>
+                        <td className="column2"></td>
+                    </tr>
                     {wishes.map(wish => (
                         <Wish description={wish.description} price={wish.price} />
                     ))} 
