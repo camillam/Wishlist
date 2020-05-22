@@ -10,9 +10,9 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
     <WishProvider>  
-      <Router>              
+      <Router>      
+        <Nav/>          
         <div className="limiter">
-          <Nav/>
           <Switch>
             <Route path="/wishlist" component={WishList} />
             <Route path="/addwish" component={AddWish} />
@@ -21,7 +21,7 @@ function App() {
         </div>
       </Router>
     </WishProvider>
-  );
+  )
 }
 
 export default App;

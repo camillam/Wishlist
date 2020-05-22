@@ -12,7 +12,7 @@ export const WishProvider = props => {
             description: 'Roccamore sko',
             price: '1999'
         }
-    ]);
+    ])
 
     //https://drive.google.com/file/d/1zlBWve6Egz-XOO8S41AZKnHCq6o-M-SL/view?usp=sharing
 
