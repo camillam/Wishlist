@@ -1,10 +1,8 @@
 import React, {useContext} from 'react';
-import {WishContext} from './WishContext';
 import {Link} from 'react-router-dom';
 
 
 const Nav = () => {
-    //const [wishes,] = useContext(WishContext);
 
     return (
         <nav>

@@ -1,4 +1,5 @@
 import React, {useState, createContext} from 'react';
+import {Dropbox} from 'dropbox';
 
 export const WishContext = createContext();
 
@@ -14,11 +15,23 @@ export const WishProvider = props => {
         }
     ])
 
-    //https://drive.google.com/file/d/1zlBWve6Egz-XOO8S41AZKnHCq6o-M-SL/view?usp=sharing
+    console.log(getWishlistFromApi());
 
     return(
         <WishContext.Provider value={[wishes, setWishes]}>
             {props.children};
         </WishContext.Provider>
     );
+}
+
+async function getWishlistFromApi() {
+    const accessToken = '8IfTC1NEM54AAAAAAAAifyUm0MYHloCbaYtpR6_xiVaYt3CJa3yR630_swRMnbQg';
+    const dbx = new Dropbox({  
+        accessToken,  
+        fetch  
+      });
+
+    dbx.filesListFolder({  
+        path: ''  
+    }).then(response => console.log(response)); 
 }
