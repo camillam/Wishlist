@@ -1,5 +1,6 @@
 import React, {useState, createContext} from 'react';
 import {Dropbox} from 'dropbox';
+import keys from './data/keys.json';
 
 export const WishContext = createContext();
 
@@ -8,7 +9,7 @@ export const WishProvider = props => {
     const [firstTimeCalled, setFirstTimeCalled] = useState(true); //TODO: Temporary fix to avoid fetching the txt file every second. See todo below. 
 
     const getWishlistFromApi = () => {
-        const accessToken = '8IfTC1NEM54AAAAAAAAifyUm0MYHloCbaYtpR6_xiVaYt3CJa3yR630_swRMnbQg';
+        const accessToken = keys["accessToken"];
         const dbx = new Dropbox({  
             accessToken,  
             fetch  
