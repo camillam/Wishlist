@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {WishContext} from './WishContext';
+import {WishContext} from '../WishContext';
  
 const AddWish = () => {
     const [description, setDescription] = useState('');
