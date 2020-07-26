@@ -21,6 +21,7 @@ const AddWish = () => {
 
     return(
         <form onSubmit={AddWish}>
+            <p>Note: This is not fully implemented yet. Do not use.</p>
             <input type='text' name='beskrivelse' value={description} onChange={updateDescription}/>
             <input type='test' name='price' value={price} onChange={updatePrice}/>
             <button>Gem</button>

@@ -11,17 +11,22 @@
         return (<div>An error occured. No wishes found. </div>);
     } else {
         return(
-            <div>         
+            <div>   
+                <p>Antal ønsker: {wishes.length}</p>      
                 <div className="wrap-table100">
                 <div className="table100">
                 <table>
-                    <tbody>
+                    <thead>
                         <tr>
-                            <td className="column1"><b>Antal ønsker: {wishes.length}</b></td>
-                            <td className="column2"></td>
+                            <td className="column1">Beskrivelse</td>
+                            <td className="column2">Pris</td>
+                            <td className="column3">Link</td>
                         </tr>
+                    </thead>
+                    <tbody>
+                        
                         {wishes.map(wish => (
-                            <Wish description={wish.description} price={wish.price} />
+                            <Wish description={wish.description} price={wish.price} link={wish.link} />
                         ))} 
                     </tbody>
                 </table> 

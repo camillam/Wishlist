@@ -36,7 +36,7 @@ li a:hover {
 table{border-spacing:1;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;width:100%;margin:0 auto;position:relative}
 table *{position:relative}
 table td,table th{padding-left:8px}
-table thead tr{height:60px;background:#36304a}
+table thead tr{height:50px;background:#d5d8d0;font-weight: bold;}
 table tbody tr{height:50px}
 table tbody tr:last-child{border:0}
 table td,table th{text-align:left}
