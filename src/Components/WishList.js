@@ -7,6 +7,8 @@
 
     if (wishes === undefined) { 
         return(<div>Loading....</div>);
+    } else if (!wishes.length) {
+        return (<div>An error occured. No wishes found. </div>);
     } else {
         return(
             <div>         
