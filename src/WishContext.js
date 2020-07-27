@@ -5,7 +5,8 @@ import keys from './data/keys.json';
 export const WishContext = createContext();
 
 export const WishProvider = props => {
-    const [wishes, setWishes] = useState({});
+    const [cWishes, setCWishes] = useState({});
+    const [eWishes, setEWishes] = useState({});
     const [firstTimeCalled, setFirstTimeCalled] = useState(true); //TODO: Temporary fix to avoid fetching the txt file every second. See todo below. 
 
     const getWishlistFromApi = () => {
@@ -16,12 +17,22 @@ export const WishProvider = props => {
           });
     
         dbx.filesDownload({
-            path: '/wish.txt'
+            path: '/CamillasWish.txt'
         }).then(responseTxt => {
             return responseTxt.fileBlob.text();
         }).then(response => {
             var obj = JSON.parse(response);
-            setWishes(obj);
+            setCWishes(obj);
+        })
+        .catch(error => console.error(error));
+
+        dbx.filesDownload({  //todo: do this in a more clever way. 
+            path: '/EllasWish.txt'
+        }).then(responseTxt => {
+            return responseTxt.fileBlob.text();
+        }).then(response => {
+            var obj = JSON.parse(response);
+            setEWishes(obj);
         })
         .catch(error => console.error(error));
     }
@@ -32,7 +43,7 @@ export const WishProvider = props => {
     }
 
     return(
-        <WishContext.Provider value={[wishes, setWishes]}>
+        <WishContext.Provider value={[cWishes, eWishes]}>
             {props.children};
         </WishContext.Provider>
     );

@@ -2,17 +2,18 @@
  import Wish from './Wish';
  import {WishContext} from '../WishContext';
  
- const WishList = () => {
-    const [wishes] = useContext(WishContext);
+ const WishList = (props) => {
+    const [cWishes, eWishes] = useContext(WishContext); //todo: do not always use Camillas
 
-    if (wishes === undefined) { 
+    if (cWishes === undefined) { 
         return(<div>Loading....</div>);
-    } else if (!wishes.length) {
+    } else if (!cWishes.length) {
         return (<div>An error occured. No wishes found. </div>);
     } else {
         return(
-            <div>   
-                <p>Antal ønsker: {wishes.length}</p>      
+            <div> 
+                <h1>{props.headline}</h1>  
+                <p>Antal ønsker: {cWishes.length}</p>      
                 <div className="wrap-table100">
                 <div className="table100">
                 <table>
@@ -23,11 +24,15 @@
                             <td className="column3">Link</td>
                         </tr>
                     </thead>
-                    <tbody>
-                        
-                        {wishes.map(wish => (
-                            <Wish description={wish.description} price={wish.price} link={wish.link} />
-                        ))} 
+                    <tbody> 
+                        {(props.user == "C") ? //todo: fix this hack
+                            cWishes.map(wish => (
+                                <Wish description={wish.description} price={wish.price} link={wish.link} />
+                            ))
+                        :
+                        eWishes.map(wish => (
+                                <Wish description={wish.description} price={wish.price} link={wish.link} />
+                            ))}                                    
                     </tbody>
                 </table> 
                 </div>

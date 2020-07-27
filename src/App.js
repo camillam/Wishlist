@@ -14,7 +14,8 @@ function App() {
         <Nav/>          
         <div className="limiter">
           <Switch>
-            <Route path="/wishlist" component={WishList} />
+            <Route path="/camillaswishlist" render={(props) => <WishList {...props} headline={'Camillas ønskeseddel'} user={'C'}/>} />
+            <Route path="/ellaswishlist" render={(props) => <WishList {...props} headline={'Ellas ønskeseddel'} user={'E'}/>} />
             <Route path="/addwish" component={AddWish} />
             <Route path="/about" component={About} />
           </Switch>
