@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Wishlist/static/css/main.08502aca.chunk.css",
-    "main.js": "/Wishlist/static/js/main.cd9a8cef.chunk.js",
-    "main.js.map": "/Wishlist/static/js/main.cd9a8cef.chunk.js.map",
+    "main.js": "/Wishlist/static/js/main.e9b79d38.chunk.js",
+    "main.js.map": "/Wishlist/static/js/main.e9b79d38.chunk.js.map",
     "runtime-main.js": "/Wishlist/static/js/runtime-main.91fb81c7.js",
     "runtime-main.js.map": "/Wishlist/static/js/runtime-main.91fb81c7.js.map",
     "static/js/2.11942bfa.chunk.js": "/Wishlist/static/js/2.11942bfa.chunk.js",
     "static/js/2.11942bfa.chunk.js.map": "/Wishlist/static/js/2.11942bfa.chunk.js.map",
     "index.html": "/Wishlist/index.html",
-    "precache-manifest.67b74c3ef9d2b8a6d7609b3cd6c1dcab.js": "/Wishlist/precache-manifest.67b74c3ef9d2b8a6d7609b3cd6c1dcab.js",
+    "precache-manifest.18d7a950b25eabe8134d906c641a4ce0.js": "/Wishlist/precache-manifest.18d7a950b25eabe8134d906c641a4ce0.js",
     "service-worker.js": "/Wishlist/service-worker.js",
     "static/css/main.08502aca.chunk.css.map": "/Wishlist/static/css/main.08502aca.chunk.css.map",
     "static/js/2.11942bfa.chunk.js.LICENSE.txt": "/Wishlist/static/js/2.11942bfa.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.91fb81c7.js",
     "static/js/2.11942bfa.chunk.js",
     "static/css/main.08502aca.chunk.css",
-    "static/js/main.cd9a8cef.chunk.js"
+    "static/js/main.e9b79d38.chunk.js"
   ]
 }
