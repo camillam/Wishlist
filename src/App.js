@@ -15,7 +15,7 @@ function App() {
         <div className="limiter">
           <Switch>
             <Route path="/camillaswishlist" render={(props) => <WishList {...props} headline={'Camillas ønskeseddel'} user={'C'}/>} />
-            <Route path="/ellaswishlist" render={(props) => <WishList {...props} headline={'Ellas ønskeseddel'} user={'E'}/>} />
+            <Route path="/ellaswishlist" render={(props) => <WishList {...props} headline={'Ellas ønskeseddel (ikke klar endnu)'} user={'E'}/>} />
             <Route path="/addwish" component={AddWish} />
             <Route path="/about" component={About} />
           </Switch>
