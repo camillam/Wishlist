@@ -4,6 +4,8 @@
  
  const WishList = (props) => {
     const [cWishes, eWishes] = useContext(WishContext); //todo: do not always use Camillas
+    const Ella = "E";
+    const Camilla = "C";
 
     if (cWishes === undefined) { 
         return(<div>Loading....</div>);
@@ -25,7 +27,7 @@
                         </tr>
                     </thead>
                     <tbody> 
-                        {(props.user == "C") ? //todo: fix this hack
+                        {(props.user === Camilla) ? //Todo: make a better solution where it is possible to have more than two users. 
                             cWishes.map(wish => (
                                 <Wish description={wish.description} price={wish.price} link={wish.link} />
                             ))

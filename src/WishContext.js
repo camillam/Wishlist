@@ -7,7 +7,7 @@ export const WishContext = createContext();
 export const WishProvider = props => {
     const [cWishes, setCWishes] = useState({});
     const [eWishes, setEWishes] = useState({});
-    const [firstTimeCalled, setFirstTimeCalled] = useState(true); //TODO: Temporary fix to avoid fetching the txt file every second. See todo below. 
+    const [firstTimeCalled, setFirstTimeCalled] = useState(true); //Temporary fix to avoid fetching the txt file every second. See todo below. 
 
     const getWishlistFromApi = () => {
         const accessToken = keys["accessToken"];
@@ -26,7 +26,7 @@ export const WishProvider = props => {
         })
         .catch(error => console.error(error));
 
-        dbx.filesDownload({  //todo: do this in a more clever way. 
+        dbx.filesDownload({  //todo: do this in a more clever way.  Maybe it is possible to fecth both files at the same time?
             path: '/EllasWish.txt'
         }).then(responseTxt => {
             return responseTxt.fileBlob.text();
