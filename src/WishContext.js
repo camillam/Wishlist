@@ -1,4 +1,4 @@
-import React, {useState, createContext} from 'react';
+import React, {useState, createContext, useEffect} from 'react';
 import {Dropbox} from 'dropbox';
 import keys from './data/keys.json';
 
@@ -7,7 +7,6 @@ export const WishContext = createContext();
 export const WishProvider = props => {
     const [cWishes, setCWishes] = useState({});
     const [eWishes, setEWishes] = useState({});
-    const [firstTimeCalled, setFirstTimeCalled] = useState(true); //Temporary fix to avoid fetching the txt file every second. See todo below. 
 
     const getWishlistFromApi = () => {
         const accessToken = keys["accessToken"];
@@ -37,10 +36,9 @@ export const WishProvider = props => {
         .catch(error => console.error(error));
     }
 
-    if (firstTimeCalled) {  //todo: WHY IS THE WISHPROVIDER INVOKED SEVERAL TIMES???
+    useEffect(() => {
         getWishlistFromApi();
-        setFirstTimeCalled(false);
-    }
+    }, []);
 
     return(
         <WishContext.Provider value={[cWishes, eWishes]}>
